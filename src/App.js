@@ -41,22 +41,17 @@ function App() {
 
     const random = Math.floor(Math.random() * product.length);
     const newObj = product[random];
+
     
-    randomProductList.map((item) => {
-      
-      console.log(item)
-      if(item.id !== random) {
         const newPrice = {
           ...newObj,
           totalToPay: newObj.price * discount,
           discount: discountValue * 100,
           valueDiscount: newObj.price - newObj.price * discount,
         };
-        setRandomProductList([...randomProductList, newPrice]);
-      } else {
-        randomChoice()
-      }
-    })
+        setRandomProductList([newPrice]);
+   
+
 
   };
 

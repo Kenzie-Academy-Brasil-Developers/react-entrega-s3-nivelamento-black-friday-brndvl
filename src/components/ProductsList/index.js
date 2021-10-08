@@ -17,6 +17,7 @@ export const ProductsList = ({
       <ul>
         {randomProductList.map((item, index) => (
           <li key={index}>
+            <p>O produto sorteado foi:</p>
             <Products
               id={item.id}
               name={item.name}
